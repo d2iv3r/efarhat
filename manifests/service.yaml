@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: wil42-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: wil42
   ports:
   - port: 80
     targetPort: 8888
-    nodePort: 30888
