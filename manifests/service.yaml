@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: wil42-service
 spec:
-  type: LoadBalancer
+  type: nodePort
   selector:
     app: wil-playground
   ports:
