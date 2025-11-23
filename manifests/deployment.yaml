@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: wil-playground
+  namespace: dev
 spec:
   selector:
     matchLabels:
@@ -15,4 +16,18 @@ spec:
         - name: wil-playground
           image: wil42/playground:v2
           ports:
-            - containerPort: 8888
+            - name: http
+              containerPort: 8888
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 5
