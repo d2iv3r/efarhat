@@ -11,7 +11,7 @@ spec:
     metadata:
       labels:
         app: wil-playground
-        app.kubernetes.io/instance: efarhat-app
+        app.kubernetes.io/instance: wil-playground
     spec:
       containers:
         - name: wil-playground
