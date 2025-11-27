@@ -5,6 +5,7 @@ metadata:
   namespace: dev
   labels:
     app.kubernetes.io/instance: efarhat-app
+    app: wil-playground
 spec:
   type: LoadBalancer
   selector:

@@ -3,8 +3,6 @@ kind: Deployment
 metadata:
   name: wil-playground
   namespace: dev
-  labels:
-    app.kubernetes.io/instance: efarhat-app
 spec:
   selector:
     matchLabels:
@@ -13,6 +11,7 @@ spec:
     metadata:
       labels:
         app: wil-playground
+        app.kubernetes.io/instance: efarhat-app
     spec:
       containers:
         - name: wil-playground
