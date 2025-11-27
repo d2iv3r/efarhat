@@ -8,7 +8,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: wil-playground
+      app.wil-playground: wil-playground
   template:
     metadata:
       labels:
