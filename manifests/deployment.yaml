@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: wil-playground
   namespace: dev
+  labels:
+    app.kubernetes.io/instance: efarhat-app
 spec:
   selector:
     matchLabels:
